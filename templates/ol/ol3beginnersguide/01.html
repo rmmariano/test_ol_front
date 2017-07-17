@@ -1,0 +1,22 @@
+{% extends "../../base/base.html" %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/assets/ol3/css/ol.css" type="text/css" />
+    <link rel="stylesheet" href="/static/assets/css/samples.css" type="text/css" />
+{% end %}
+
+{% block js %}
+    <script type="text/javascript" src="/static/assets/ol3/js/ol.js"></script>
+    <script type="text/javascript" src="/static/js/ol/ol3beginnersguide/01/common.js"></script>
+{% end %}
+
+
+{% block page_header %}
+
+{% end %}
+
+{% block body %}
+    <h2> {{ text }} </h2>
+
+    <div id="map" class="map"></div>
+{% end %}

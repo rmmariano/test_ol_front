@@ -39,15 +39,27 @@ class IndexHandler(BaseHandler):
         self.render("index.html", **context)
 
 
-class OpenLayersHandler(BaseHandler):
+class OpenLayersBasicExampleHandler(BaseHandler):
+    # https://openlayers.org/en/latest/doc/quickstart.html
 
     # A list of URLs that can be use for the HTTP methods
-    urls = [r"/test_openlayers", r"/test_openlayers/"]
+    urls = [r"/test_ol_basic_example", r"/test_ol_basic_example/"]
 
     def get(self):
         # Some fictional context
-        context = {"text": "Welcome"}
+        context = {"text": "Basic Example"}
 
         # The ** before the context do that dictionary is "break" in the positions of the render method
         # The under line is like this: self.render("index.html", text = "Welcome")
-        self.render("ol/test_openlayers.html", **context)
+        self.render("ol/test_ol_basic_example.html", **context)
+
+
+class OL3BeginnersGuide01Handler(BaseHandler):
+    # https://openlayersbook.github.io/ch01-getting-started-with-openlayers/example-01.html
+
+    urls = [r"/ol3beginnersguide/01", r"/ol3beginnersguide/01/"]
+
+    def get(self):
+        context = {"text": "Creating your first map"}
+
+        self.render("ol/ol3beginnersguide/01.html", **context)
