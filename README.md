@@ -1,10 +1,10 @@
-# basic_tornado_project
+# test_ol_front
 
-A basic project for Tornado application.
+Testing OpenLayers using as server a Tornado application.
 
 The meaning of the mainly folders and files are:
 
-- handlers: folder with the controllers;
+- controllers: folder with the controllers;
 
 - settings: folder with the settings;
 
